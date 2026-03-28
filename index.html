@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stronger Than Very</title>
+    <link rel="stylesheet" href="./static/styles.css">
+  </head>
+  <body>
+    <main class="app">
+      <header class="app__header">
+        <div class="app__title">
+          <span class="app__kicker">Language Tool</span>
+          <h1>Stronger Than Very</h1>
+          <p>Find sharper alternatives for "very" phrases in a single click.</p>
+        </div>
+      </header>
+
+      <section class="card">
+        <div class="input-row">
+          <label class="input-label" for="adjective">very</label>
+          <input id="adjective" type="text" placeholder="tired" autocomplete="off" />
+          <button id="suggest" type="button" class="btn">Suggest</button>
+        </div>
+        <div class="helper">Try: happy, angry, tired, scared, important, big</div>
+
+        <div id="result" class="result" aria-live="polite">
+          <span class="result__label">Suggestion</span>
+          <span id="suggestion" class="result__value">—</span>
+        </div>
+
+        <div class="actions">
+          <button id="another" type="button" class="btn btn--ghost">Try another</button>
+          <button id="copy" type="button" class="btn btn--ghost">Copy</button>
+        </div>
+      </section>
+
+      <section class="card card--mini">
+        <h2>Recent suggestions</h2>
+        <ul id="history" class="history"></ul>
+      </section>
+
+      <footer class="app__footer"></footer>
+    </main>
+
+    <script src="./static/app.js"></script>
+  </body>
+</html>
